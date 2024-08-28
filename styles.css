@@ -58,6 +58,12 @@ align-items: center;
 .nav__logo--wrapper {
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.nav__logo--wrapper:hover  .nav__logo-title {
+color: #6415ff;
+
 }
 
 
@@ -69,6 +75,8 @@ align-items: center;
 .nav__logo-title {
     font-size: 24px;
     font-weight: 900;
+    color: black;
+    transition: .3s;
 }
 
 .nav__links {
@@ -82,6 +90,14 @@ font-size: 14px;
     text-decoration: none;
     color: black;
     font-weight: 500;
+    padding-bottom: 4px;
+    transition: .4s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navop:hover {
+color: #6415ff;
+border-bottom: 2px solid #6415ff;
 }
 
 
@@ -91,6 +107,12 @@ padding: 0.75rem 2rem;
     background-color: #6415ff;
    border: 2px solid #6415ff; 
    border-radius: 32px;
+   transition: .4s ease;
+}
+
+.signupbtn:hover {
+    background-color: #400fa3;
+    border-color: #400fa3;
 }
 
 .login {
@@ -102,7 +124,7 @@ padding: 0.75rem 2rem;
 .signup__page {
     display: flex;
 padding: 96px 0;
-
+height: 100vh;
 }
 
 .signup__email--wrapper {
@@ -114,24 +136,28 @@ padding: 96px 0;
     z-index: 2;
 }
 
+
+
 .signup__text {
     text-align: left;
 }
 
 .title {
     font-size: 48px;
+    font-weight: 700;
 }
 
 .subtitle {
     font-size: 18px;
     font-weight: 350;
     color: #243e63;
-    margin: 16px 0;
+    margin: 8px 0;
 }
 
 .signup__img{
     width: 60%;
     z-index: 2;
+    padding-left: 16px;
 }
 
 .signup__email--input {
@@ -147,7 +173,15 @@ padding: 96px 0;
     width: 100%;
     padding: 22px 192px 22px 32px;
  border: solid rgba(226, 232, 240);
+}
 
+#signup__email--textbox:hover {
+    border-color: lightgray;
+}
+
+#signup__email--textbox:focus {
+    border-color: transparent;
+    outline-color: #6415ff;
 }
 
 .signup__emailbtn {
@@ -160,6 +194,13 @@ padding: 96px 0;
     background-color: #6415ff;
     padding: 14px 0;
     border: solid 1px #6415ff;
+    transition: .4s ease;
+}
+
+
+.signup__emailbtn:hover {
+    background-color: #400fa3;
+    border-color: #400fa3;
 }
 
 .signup__emailbtn, #signup__email--textbox {
@@ -197,6 +238,13 @@ color: rgb(160 174 192);
 
 }
 
+.features__section--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .features__text--wrapper {
     display: flex;
     flex-direction: column;
@@ -208,16 +256,17 @@ padding: 64px 0;
 #features__title {
     font-weight: bold;
 letter-spacing: .1rem;
-margin-bottom: 1rem;
+
+
 }
 
 .features__subtitle {
     font-size: 52px;
+    margin: 16px 0;
 }
 
 .features__para {
     color: #7C8BA1 ;
-    margin-top: 1rem;
     max-width: 35rem;
 }
 
@@ -276,10 +325,13 @@ padding: 0 16px;
 
 .features__pink-blob {
     position: absolute;
-    right: -2px;
+    right: -100px;
+    bottom: -180px;
     width: 16rem;
     opacity: 0.25;
 }
+
+
 
 /* LEARN MORE */
 
@@ -296,12 +348,12 @@ margin-top: 64px;
     display: flex;
     flex-direction: column;
     margin-right: 64px;
+
 }
 
 .learn__img--wrapper {
     width: 50%;
-  
-
+    position: relative;
 }
 
 .learn__img {
@@ -309,7 +361,7 @@ margin-top: 64px;
     border: 1px solid rgb(226, 232, 240);
     border-radius: .25rem;
     z-index: 3px;
-    position: relative;
+
 }
 
 .learn__quality {
@@ -341,16 +393,22 @@ font-size: 14px;
 margin-top: 32px;
 color: white;
 background-color: #6415ff;
-padding: 0.75rem 2rem;
+padding: 0.75rem 1.75rem;
 border: 2px solid #6415ff;
 border-radius: 999px;
+transition: .4s ease;
+}
+
+.learn__morebtn:hover {
+    background-color: #400fa3;
+    border-color: #400fa3;
 }
 
 .learn__img--dotsquare {
     position: absolute;
     width: 5rem;
-    right: 6.25rem;
-    bottom: 1rem;
+    right: -2.5rem;
+    bottom: -2.25rem;
     fill: currentColor;
     color: #6415ff;
     z-index: -10;
@@ -615,7 +673,7 @@ flex-direction: wrap;
     width: calc(100% + 64px);
 }
 
-.title {
+.pricetitle {
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -664,11 +722,11 @@ padding: 0;
 
 
 .price__option-button--wrapper {
-    padding: 32px 72px;
-    width: calc(100% + 64px);
+    padding: 32px 54px;
+    text-align: center;
+    width: calc(100% - 24px);
     border-top: 1px solid;
     border-width: 1px;
-
     border-color: rgb(226, 232, 240);
 
 }
@@ -678,15 +736,29 @@ padding: 0;
 .price__option-button {
     width: 100%;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1.1rem 2rem;
 font-size: .875rem;
 font-weight: 700;
 text-transform: uppercase;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
        border-radius: 32px;
-    border: none;
+  border: none;
+    transition: transform .4s ease;
 }
 
+
+.price__option-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.244);
+ 
+    cursor: pointer;
+}
+
+
+
+.price__option-button:focus {
+    outline: 3px solid #357ee5;
+}
 
 
 .business {
@@ -771,7 +843,14 @@ margin: 0 auto;
     color: white;
     font-weight: 700;
     margin: 0 32px 0 0;
+    transition: .4s ease;
 }
+
+.CTA__get-started:hover {
+    background-color: rgb(227, 93, 93);
+    cursor: pointer;
+}
+
 
 .CTA__contact-us {
     padding: 1.25rem 2.5rem;
@@ -781,6 +860,14 @@ margin: 0 auto;
 background-color: transparent;
 color: white;
     font-weight: 700;
+transition: .6s ease;
+}
+
+
+.CTA__contact-us:hover {
+    background-color: rgb(255, 255, 255);
+    color: #6415ff;
+    cursor: pointer;
 
 }
 
@@ -835,6 +922,7 @@ max-width: 1280px;
     flex-direction: column;
     align-items: left;
     color: white;
+    z-index: 3;
 }
 
 .footer__link--list {
@@ -857,13 +945,20 @@ padding: 0;
 }
 
 
+.footer__divider {
+    width: 100%;
+    border: 1px solid #7f4be6;
+    margin-top: 4rem;
+    opacity: .7;
+}
+
 
 .footer__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 120px 0 auto;
+    margin: 60px 0 auto;
 }
 
 .footerlogotitle {
@@ -873,6 +968,7 @@ color: white;
 .footer__info--text {
     color: rgb(203 213 224);
     font-size: 16px;
+ 
 }
 
 .footer__info--social-wrapper
@@ -894,6 +990,7 @@ align-items: center;
     padding: 8px;
     border: 1px solid transparent;
     border-radius: 9999px;
+    z-index: 3;
 }
 
 .fa-brands {
