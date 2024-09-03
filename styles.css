@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 * {
 box-sizing: border-box;
 margin: 0;
 font-family: "Inter", sans-serif;
 zoom: 100.5%;
+
 }
 
 
@@ -60,31 +63,37 @@ align-items: center;
 
 
 .burger__backdrop {
-    display: none;
     flex-direction: column;
     align-items: center;
     position: fixed;
     z-index: 10;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 5px;
+
     top: 0px;
     left: 0px;
     right: -5px;
     margin: 1rem;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
 }
+
+
 
 .burger__menu {
     color: black;
 }
 
 
-.burger__menu, .burger__backdrop {
-    display: none;
+.burger__menu{
+  display: none;
 }
 
 .burger--open .burger__backdrop{
+    transform: translateX(0);
     display: flex;
+
 }
 
 .nav__logo--wrapper {
@@ -657,7 +666,7 @@ position: relative;
 .prices {
     width: 100%;
     display: flex;
-padding: 0 24px;
+ 
 }
 
 .prices__blob {
@@ -759,7 +768,7 @@ padding: 0;
 
 
 .price__option-button--wrapper {
-    width: fit-content;
+    width: ;
     padding: 32px 54px;
     text-align: center;
     border-top: 1px solid;
@@ -772,7 +781,8 @@ padding: 0;
 
 .price__option-button {
     width: 100%;
-    min-width: 180px;
+    width: 200px;
+    min-width: 133px;
     color: white;
     padding: 1.1rem 2rem;
 font-size: .875rem;
@@ -1011,6 +1021,18 @@ cursor: pointer;
 color: white;
 }
 
+.footerlogo {
+    transition: .3s ease;
+}
+
+
+.footerlogowrapper:hover .footerlogotitle, .footerlogowrapper:hover .footerlogo {
+    color: white;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
 .footer__info--text {
     color: rgb(203 213 224);
     font-size: 16px;
@@ -1070,7 +1092,18 @@ height: 20rem;
 
 /*Burger*/
 
+@media (max-width: 1400px) {
+    .prices {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 
+    }
+    .price__option {
+        max-width: calc(100%/2);
+
+    }
+}
 
 
 
@@ -1137,6 +1170,7 @@ height: 20rem;
         list-style-type: none;
         text-align: center;
         padding-left: 0;
+        padding: 24px 0;
     }
 
   
