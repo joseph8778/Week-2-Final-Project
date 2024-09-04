@@ -720,9 +720,8 @@ position: relative;
 }
 
 
-
 .price_title {
-    font-size: 1.75rem;
+    font-size: 30px;
     font-weight: 700;
 }
 
@@ -1499,6 +1498,10 @@ justify-content: center;
 .price__option-button {
     font-size: 12px;
  padding: 12px 12px;
+}
+
+.price_title {
+    font-size: 24px;
 }
 
 
