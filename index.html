@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/e67973d4c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 
@@ -13,25 +14,43 @@
 
 <main>
 
-<section>
+<section id="main__section">
 <div class="row">
     <nav>
-       <div class="nav__logo--wrapper">
+       <a href="https://treact.owaiskhan.me/" class="nav__logo--wrapper">
         <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg" class="nav__logo" alt="">
         <h1 class="nav__logo-title"> Treact</h1>
-       </div> 
+       </a> 
        
        <div class="nav__links">
 <div class="nav__directory">
-    <a href="#" class="nav__link"> About</a>
-    <a href="#" class="nav__link"> Blog</a>
-    <a href="#" class="nav__link"> Pricing</a>
-    <a href="#" class="nav__link"> Contact Us</a>
+    <a href="#" class="nav__link navop"> About</a>
+    <a href="#" class="nav__link navop"> Blog</a>
+    <a href="#" class="nav__link navop"> Pricing</a>
+    <a href="#" class="nav__link navop"> Contact Us</a>
 </div>
         <div class="nav__actions">
-            <a href="#" class="nav__link login"> Login</a>
+            <a href="#" class="nav__link navop"> Login</a>
             <a href="#" class="nav__link signupbtn">Sign Up</a>
         </div>
+       </div>
+
+       <button class="burger__menu" onclick="openBurger()">
+        <i class="fa-solid fa-bars"></i>
+       </button>
+
+       <div class="burger__backdrop">
+        <button class="burger__menu burger__menu--close" onclick="closeBurger()" >
+            <i class="fa-solid fa-x"></i></button>
+
+            <ul class="burger__ul">
+           <li class="burger__list" ><a href="#" class="nav__link navop burgeritem" href="">About</a></li>     
+           <li class="burger__list" ><a href="#" class="nav__link navop burgeritem" href="">Blog</a></li>     
+           <li class="burger__list" ><a href="#" class="nav__link navop burgeritem" href="">Pricing</a></li>     
+           <li class="burger__list" ><a href="#" class="nav__link navop burgeritem" href="">Contact Us</a></li>     
+           <li class="burger__list" ><a href="#" class="nav__link navop burgeritem" href="">Login</a></li>     
+           <li class="burger__list" ><a class="nav__link signupbtn burgeritem" href="#">Sign Up</a></li>     
+            </ul>
        </div>
 
     </nav>
@@ -59,7 +78,6 @@
         <div class="container">
             
             <div class="row">
-
                 <div class="features__section--wrapper">
                 
                 
@@ -142,7 +160,7 @@
     </section>
 
 
-<section>
+<section id="quality__work">
     <div class="container">
         <div class="row">
         <div class="learn">
@@ -190,15 +208,15 @@
                         <li class="steps__list--item">
                             <div class="steps__list--number">02</div>
                             <div class="steps__list--text">
-                                <h1 class="steps__list--header">Register</h1>
-                                <p class="steps__list--subtitle">Create an account with us using Google or Facebook</p>
+                                <h1 class="steps__list--header">Download</h1>
+                                <p class="steps__list--subtitle">Browse and Download the template that you like from the marketplace.</p>
                             </div>
                         </li>
                         <li class="steps__list--item">
                             <div class="steps__list--number">03</div>
                             <div class="steps__list--text">
-                                <h1 class="steps__list--header">Register</h1>
-                                <p class="steps__list--subtitle">Create an account with us using Google or Facebook</p>
+                                <h1 class="steps__list--header">Run</h1>
+                                <p class="steps__list--subtitle">Follow the instructions to setup and customize the template to your needs.</p>
                             </div>
                         </li>
                     </div>
@@ -217,7 +235,7 @@
                 <div class="values__info">
                     <span id="top-title">Values</span>
 
-                    <h1 class="values__info--title">We Always Abide by <span class="purple">Our Principles.</span></h1>
+                    <h1 class="values__info--title">We Always Abide by Our<span class="purple"> Principles.</span></h1>
 
                     <p class="values__info--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium ducimus earum. Dolorem, temporibus. Eveniet, harum unde recusandae et inventore labore nam consectetur quas nemo exercitationem, ullam mollitia quibusdam voluptatum.</p>
 
@@ -280,7 +298,7 @@
                     </div>
 
                     <div class="price__option-price-wrapper">
-                       <span class="price__option-price title">PERSONAL</span>
+                       <span class="price__option-price price_title">PERSONAL</span>
                        <span class="price__option-price number">$17.99</span>
                        <span class="price__option-price duration">MONTHLY</span>
                     </div>
@@ -298,7 +316,7 @@
                     </div>
 
                     <div class="price__option-button--wrapper">
-                        <button class="price__option-button">Buy Now</button>
+                        <button class="price__option-button" onclick="#">Buy Now</button>
                     </div>
 
                 </div>
@@ -307,7 +325,7 @@
                   
 
                     <div class="price__option-price-wrapper">
-                       <span class="price__option-price title">BUSINESS</span>
+                       <span class="price__option-price price_title">BUSINESS</span>
                        <span class="price__option-price number">$37.99</span>
                        <span class="price__option-price duration business-list">MONTHLY</span>
                     </div>
@@ -335,7 +353,7 @@
                     </div>
 
                     <div class="price__option-price-wrapper">
-                       <span class="price__option-price title">ENTERPRISE</span>
+                       <span class="price__option-price price_title">ENTERPRISE</span>
                        <span class="price__option-price number">$57.99</span>
                        <span class="price__option-price duration">MONTHLY</span>
                     </div>
@@ -377,8 +395,8 @@
                     <div class="CTA__title">Developers all over the world are happily using Treact.</div>
 
                     <div class="CTA__buttons">
-                    <button class="CTA__get-started">Get Started</button>
-                    <button class="CTA__contact-us">Contact Us</button>
+                    <button onclick="#" class="CTA__get-started">Get Started</button>
+                    <button onclick="#" class="CTA__contact-us">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -410,48 +428,53 @@
                                 </ul>
                             </div>
                             <div class="footer__link">
-                                <h3 class="footer__link--title">Main</h3>
+                                <h3 class="footer__link--title">Product</h3>
                                 <ul class="footer__link--list">
-                                    <li class="footer__link--item">Blog</li>
-                                    <li class="footer__link--item">FAQs</li>
-                                    <li class="footer__link--item">Support</li>
-                                    <li class="footer__link--item">About Us</li>
+                                    <li class="footer__link--item">Log In</li>
+                                    <li class="footer__link--item">Personal</li>
+                                    <li class="footer__link--item">Business</li>
+                                    <li class="footer__link--item">Team</li>
                                 </ul>
                             </div>
                             <div class="footer__link">
-                                <h3 class="footer__link--title">Main</h3>
+                                <h3 class="footer__link--title">Press</h3>
                                 <ul class="footer__link--list">
-                                    <li class="footer__link--item">Blog</li>
-                                    <li class="footer__link--item">FAQs</li>
-                                    <li class="footer__link--item">Support</li>
-                                    <li class="footer__link--item">About Us</li>
+                                    <li class="footer__link--item">Logos</li>
+                                    <li class="footer__link--item">Events</li>
+                                    <li class="footer__link--item">Stories</li>
+                                    <li class="footer__link--item">Office Us</li>
                                 </ul>
                             </div>
                             <div class="footer__link">
-                                <h3 class="footer__link--title">Main</h3>
+                                <h3 class="footer__link--title">Team</h3>
                                 <ul class="footer__link--list">
-                                    <li class="footer__link--item">Blog</li>
-                                    <li class="footer__link--item">FAQs</li>
-                                    <li class="footer__link--item">Support</li>
-                                    <li class="footer__link--item">About Us</li>
+                                    <li class="footer__link--item">Career</li>
+                                    <li class="footer__link--item">Founders</li>
+                                    <li class="footer__link--item">Culture</li>
+                                    <li class="footer__link--item">Onboarding</li>
                                 </ul>
                             </div>
                             <div class="footer__link">
-                                <h3 class="footer__link--title">Main</h3>
+                                <h3 class="footer__link--title">Legal</h3>
                                 <ul class="footer__link--list">
-                                    <li class="footer__link--item">Blog</li>
-                                    <li class="footer__link--item">FAQs</li>
-                                    <li class="footer__link--item">Support</li>
-                                    <li class="footer__link--item">About Us</li>
+                                    <li class="footer__link--item">GDPR</li>
+                                    <li class="footer__link--item">Privacy Policy</li>
+                                    <li class="footer__link--item">Terms of Service</li>
+                                    <li class="footer__link--item">Disclaimer</li>
                                 </ul>
                             </div>
+
+                          
                            
                         </div>
+
+                        <div class="footer__divider"></div>
+
                         <div class="footer__info">
-                            <div class="nav__logo--wrapper footerlogowrapper">
+                            <a href="#main__section"class="nav__logo--wrapper footerlogowrapper">
                                 <img src="https://treact.owaiskhan.me/static/media/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" class="nav__logo footerlogo" alt="">
                                 <h1 class="nav__logo-title footerlogotitle"> Treact</h1>
-                            </div>
+                            </a>
                                 <h2 class="footer__info--text">© 2018 Treact Inc. All Rights Reserved.</h2>
                                 <div class="footer__info--social-wrapper">
                                     <a href="" class="social__link" >
@@ -467,3 +490,6 @@
 </footer>
 </body>
 </html>
+
+
+

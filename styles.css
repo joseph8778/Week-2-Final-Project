@@ -719,8 +719,10 @@ position: relative;
     width: calc(100% + 64px);
 }
 
-.pricetitle {
-    font-size: 1.25rem;
+
+
+.price_title {
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
@@ -1474,7 +1476,7 @@ justify-content: center;
 }
 
 .pricing__title {
-    font-size: 32px;
+    font-size: 18px;
 }
 
 .pricing__para {
