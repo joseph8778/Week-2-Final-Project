@@ -1107,6 +1107,25 @@ justify-content: center;
 
 
 
+@media (max-width: 1184px) {
+    .CTA__text--wrapper {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .CTA__title {
+        margin-bottom: 32px;
+        width: 350px;
+        font-size: 24px;
+    }
+
+    .one {
+        bottom: -135px;
+    }
+}
+
+
+
 
 /*MOBILE PHONES*/
 
@@ -1450,22 +1469,60 @@ justify-content: center;
  align-items: center;
 }
 
+.price__option {
+    margin-left: 0;
 }
 
-@media (max-width: 1184px) {
-    .CTA__text--wrapper {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-    .CTA__title {
-        margin-bottom: 32px;
-        width: 350px;
-        font-size: 24px;
-    }
-
-    .one {
-        bottom: -135px;
-    }
+.pricing__title {
+    font-size: 32px;
 }
+
+.pricing__para {
+    font-size: 16px;
+}
+
+.number {
+    font-size: 32px;
+}
+
+.price__option-service--title {
+    font-size: 14px;
+    text-align: center;
+}
+
+.price__option-service--listitm {
+    font-size: 12px;
+}
+
+.price__option-button {
+    font-size: 12px;
+ padding: 12px 12px;
+}
+
+
+.CTA__title {
+    margin-bottom: 32px;
+    width: 250px;
+    font-size: 16px;
+}
+
+.CTA__buttons {
+    height: 30px;
+}
+
+.CTA__get-started {
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+   padding: 12px 12px;
+}
+.CTA__contact-us {
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+   padding: 12px 12px;
+}
+
+}
+
 
