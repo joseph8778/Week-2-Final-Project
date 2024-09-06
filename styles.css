@@ -15,7 +15,7 @@ zoom: 100.5%;
 
 main {
     overflow: hidden;
-    padding: 0 20px;
+    padding: 0 32px;
 }
 
 
@@ -836,6 +836,120 @@ color: rgb(100 21 255);
 }
 
 
+/*TESTIMONIALS*/
+
+.testimonials__wrapper {
+    display: flex;
+    padding: 96px 0;
+}
+
+.testimonials__img {
+    width: 50%;
+}
+
+.testimonials__info {
+    width: 50%;
+    padding-left: 64px;
+}
+
+.testimonials__title {
+    margin-top: 16px;
+}
+
+.testimonials__para {
+    margin-top: 24px;
+}
+
+.testimonials__review--wrapper {
+margin-top: 40px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.review__title {
+    margin-top: 16px;
+}
+
+.review__para {
+    margin: 16px 0 40px 0;
+    font-weight: 500;
+    line-height: 1.65rem;
+    color: rgb(74 85 104);
+
+}
+
+.profile__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__wrapper {
+    display: flex;
+}
+
+.review__pfp--mask {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.review__pfp {
+display: inline;
+margin: 0 auto;
+height: 100%;
+width: auto;
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
+}
+
+.profile__name {
+    font-size: 20px;
+}
+
+.profile__desc {
+    font-size: 16px;
+}
+
+.profile__arrow--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.profile__arrow--divider {
+    height: 30%;
+    width: 1px;
+    background-color:rgb(226, 232, 240);
+}
+
+
+.right__arrow, .left__arrow {
+padding: 14px 16px 16px 16px;
+margin: 0 12px;
+width: 60%;
+height: 55%;
+border: none;
+border-radius: 50%;
+background-color:rgb(226, 232, 240);
+color:#6415ff;
+transition: .3s ease;
+}
+
+.right__arrow:hover, .left__arrow:hover {
+        background-color: rgb(207, 210, 216);
+        cursor: pointer;
+}
+
 
 /* CALL TO ACTION */
 
@@ -1037,7 +1151,7 @@ color: white;
 .footer__info--text {
     color: rgb(203 213 224);
     font-size: 16px;
- 
+    text-align: center;
 }
 
 .footer__info--social-wrapper
@@ -1131,6 +1245,38 @@ justify-content: center;
 /*MOBILE PHONES*/
 
 @media (max-width: 1024px) {
+    .testimonials__wrapper {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+    }
+
+    .testimonials__info{
+        padding-left: 0;
+        margin-top: 64px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .testimonials__title {
+        font-size: 36px;
+    }
+
+    .testimonials__para {
+        font-size: 14px;
+    }
+
+    .review__title {
+        font-size: 20px;
+    }
+
+    .review__para {
+        font-size: 16px;
+  
+    }
+
     .signup__page {
         display: flex;
     flex-direction: column;
@@ -1263,7 +1409,7 @@ align-items: center;
 
 .price__option {
 margin-right: 0;
-min-width: 45%;
+min-width: 245px;
 }
 
 .price__option-button--wrapper {
@@ -1281,6 +1427,17 @@ justify-content: center;
 /* MEDIUM PHONE*/
 
 @media (max-width: 768px) {
+
+    .profile__container, .profile__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile__info {
+      margin: 24px 0;
+    }
+
+
+
 .learn {
     display: flex;
     flex-direction: column-reverse;
@@ -1406,11 +1563,11 @@ margin-top: 64px;
 
 .CTA__background{
     padding: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
-.CTA__title{
-    width: 200%;
-}
+
 
 .footer__links {
     flex-wrap: wrap;
@@ -1475,7 +1632,7 @@ justify-content: center;
 }
 
 .pricing__title {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .pricing__para {
@@ -1508,11 +1665,15 @@ justify-content: center;
 .CTA__title {
     margin-bottom: 32px;
     width: 250px;
-    font-size: 16px;
+    max-width: 400px;
+    font-size: 18px;
 }
 
 .CTA__buttons {
-    height: 30px;
+    height: 40px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .CTA__get-started {
@@ -1520,12 +1681,28 @@ justify-content: center;
    align-items: center;
    font-size: 12px;
    padding: 12px 12px;
+   margin: 16px 0 16px 0;
 }
 .CTA__contact-us {
    display: flex;
    align-items: center;
    font-size: 12px;
    padding: 12px 12px;
+}
+
+.signup__emailbtn {
+    position:static;
+    margin-top: 24px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.signup__email--input {
+    flex-direction: column;
+}
+
+#signup__email--textbox {
+    padding-right: 0;
 }
 
 }
