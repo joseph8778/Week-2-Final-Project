@@ -166,7 +166,7 @@ padding: 0.75rem 2rem;
 .signup__page {
     display: flex;
 padding: 96px 0;
-height: 100vh;
+align-items: center;
 }
 
 
@@ -175,7 +175,7 @@ height: 100vh;
 .signup__email--wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 24px;
     align-items: left;
     width: 40%;
     z-index: 2;
